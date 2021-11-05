@@ -22,7 +22,7 @@ class LeagueDetails extends Component {
   };
 
   componentDidMount= () => {
-    fetch('https://api.pandascore.co/leagues/'+this.props.match.params.leagueId,this.state.options)
+    fetch('https://esport-peue9cr4v-msf-soumi.vercel.app/leagues'+this.props.match.params.leagueId,this.state.options)
     .then(response =>  response.json())
     .then(res => this.setState({league:res,videogame:res.videogame,series:res.series}) )
     .catch(err => console.error(err));

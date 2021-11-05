@@ -24,7 +24,7 @@ class Leagues extends Component {
 
     componentDidMount= () => {
         
-        fetch('https://api.pandascore.co/leagues?sort=&page='+this.state.currentPage+'&per_page=5', this.state.options)
+        fetch('https://esport-peue9cr4v-msf-soumi.vercel.app/leagues?sort=&page='+this.state.currentPage+'&per_page=5', this.state.options)
         .then(response =>  response.json())
         .then(response => {console.log(response); this.setState({leagues:response});})
         .catch(err => console.error(err));
